@@ -1,0 +1,15 @@
+﻿@model WebApplication3.Models.Order
+
+<h2>Подробная информация о заказе</h2>
+<div>
+    @Html.LabelFor(m => m.Order_Id, "Id")
+    @Html.DisplayFor(model => model.Order_Id)
+</div>
+<div>
+    @Html.LabelFor(m => m.Title, "Наименование")
+    @Html.DisplayFor(model => model.Title)
+</div>
+<div>
+    @Html.LabelFor(m => m.Price, "Цена")
+    @Html.DisplayFor(model => model.Price)
+</div>

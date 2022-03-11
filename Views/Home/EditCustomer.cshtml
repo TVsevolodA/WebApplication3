@@ -1,0 +1,28 @@
+﻿<h2>Изменить информацию о заказчике</h2>
+@model WebApplication3.Models.Customer
+
+@using (Html.BeginForm("EditCustomer", "Home", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+    <div>
+        @Html.HiddenFor(m => m.Customer_Id)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.SNP, "ФИО")
+        @Html.EditorFor(m => m.SNP)
+        @Html.ValidationMessageFor(model => model.SNP)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Address, "Адрес")
+        @Html.EditorFor(m => m.Address)
+        @Html.ValidationMessageFor(model => model.Address)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Telephone, "Телефон")
+        @Html.EditorFor(m => m.Telephone)
+        @Html.ValidationMessageFor(model => model.Telephone)
+    </div>
+    <div>
+        <input type="submit" value="Отправить" />
+    </div>
+}

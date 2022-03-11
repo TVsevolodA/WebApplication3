@@ -1,0 +1,21 @@
+﻿<h2>Добавление заказчика</h2>
+@model WebApplication3.Models.Customer
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <div>
+        ФИО: @Html.TextBoxFor(model => model.SNP)
+        @Html.ValidationMessageFor(model => model.SNP)
+    </div>
+    <div>
+        Адрес доставки: @Html.TextBoxFor(model => model.Address)
+        @Html.ValidationMessageFor(model => model.Address)
+    </div>
+    <div>
+        Контактный телефон: @Html.TextBoxFor(model => model.Telephone, new { @placeholder = "+X-XXX-XXX-XX-XX" })
+        @Html.ValidationMessageFor(model => model.Telephone)
+    </div>
+    <div>
+        <input type="submit" value="Create" />
+    </div>
+}

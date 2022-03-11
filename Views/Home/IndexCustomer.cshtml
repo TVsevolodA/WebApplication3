@@ -1,0 +1,30 @@
+﻿@model IEnumerable<WebApplication3.Models.Customer>
+
+<div>
+    <h3>Заказчики</h3>
+    <div></a>
+        <a href="/Home/CreateCustomer">Создать заказчика</a>
+    </div>
+
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>ФИО</td>
+            <td>Адрес</td>
+            <td>Контактный телефон</td>
+        </tr>
+        @foreach (WebApplication3.Models.Customer c in Model)
+        {
+    <tr>
+        <td>@c.Customer_Id</td>
+        <td>@c.SNP</td>
+        <td>@c.Address</td>
+        <td>@c.Telephone</td>
+        <td><a href="/Home/CreateOrder/@c.Customer_Id" id="@c.Customer_Id">Заказать</a></td>
+        <td><a href="/Home/DetailsCustomer/@c.Customer_Id" id="@c.Customer_Id">Подробнее</a></td>
+        <td><a href="/Home/EditCustomer/@c.Customer_Id" id="@c.Customer_Id">Изменить</a></td>
+        <td><a href="/Home/DeleteCustomer/@c.Customer_Id" id="@c.Customer_Id">Удалить</a></td>
+    </tr>
+        }
+    </table>
+</div>

@@ -1,0 +1,21 @@
+﻿@model IEnumerable<WebApplication3.Models.Order>
+
+<div>
+    <h3>Заказы</h3>
+    <table>
+        <tr>
+            <td>Название</td>
+            <td>Цена</td>
+        </tr>
+        @foreach (WebApplication3.Models.Order o in Model)
+        {
+            <tr>
+                <td>@o.Title</td>
+                <td>@o.Price</td>
+                <td><a href="/Home/DetailsOrder/@o.Order_Id" id="@o.Order_Id">Подробнее</a></td>
+                <td><a href="/Home/EditOrder/@o.Order_Id" id="@o.Order_Id">Изменить</a></td>
+                <td><a href="/Home/DeleteOrder/@o.Order_Id" id="@o.Order_Id">Удалить</a></td>
+            </tr>
+        }
+    </table>
+</div>

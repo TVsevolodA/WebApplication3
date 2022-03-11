@@ -1,0 +1,19 @@
+﻿<h2>Для информации о заказчике</h2>
+@model WebApplication3.Models.Customer
+
+<div>
+    @Html.LabelFor(m => m.Customer_Id, "Id")
+    @Html.DisplayFor(m => m.Customer_Id)
+</div>
+<div>
+    @Html.LabelFor(m => m.SNP, "ФИО")
+    @Html.DisplayFor(m => m.SNP)
+</div>
+<div>
+    @Html.LabelFor(m => m.Address, "Адрес")
+    @Html.DisplayFor(m => m.Address)
+</div>
+<div>
+    @Html.LabelFor(m => m.Telephone, "Телефон")
+    @Html.DisplayFor(m => m.Telephone)
+</div>

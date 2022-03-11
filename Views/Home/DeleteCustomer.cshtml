@@ -1,0 +1,24 @@
+﻿<h2>Удалить заказчика</h2>
+@model WebApplication3.Models.Customer
+@using (Html.BeginForm("DeleteCustomer", "Home"))
+{
+    <div>
+        @Html.LabelFor(m => m.Customer_Id, "Id")
+        @Html.DisplayFor(model => model.Customer_Id)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.SNP, "ФИО")
+        @Html.DisplayFor(model => model.SNP)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Address, "Адрес")
+        @Html.DisplayFor(model => model.Address)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Telephone, "Телефон")
+        @Html.DisplayFor(model => model.Telephone)
+    </div>
+    <div>
+        <input type="submit" value="Delete" />
+    </div>
+}
